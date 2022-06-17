@@ -7,9 +7,14 @@ import { Suspense, useRef, useState } from "react";
 
 import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { Environment, PresentationControls } from "@react-three/drei";
+import {
+  Environment,
+  PresentationControls,
+  OrbitControls,
+} from "@react-three/drei";
 import Model from "../models/Chair";
 import { Html, useProgress } from "@react-three/drei";
+import { Camera } from "three";
 
 function Box(props: any) {
   // This reference gives us direct access to the THREE.Mesh object
@@ -56,11 +61,27 @@ const Home: NextPage = () => {
       <ambientLight intensity={0.5} />
       <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
       <pointLight position={[-10, -10, -10]} />
+
       {/* <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} /> */}
       {/* <Chair /> */}
       <Suspense fallback={<Loader />}>
-        <PresentationControls
+        <Model />
+      </Suspense>
+      <OrbitControls
+        makeDefault
+        minPolarAngle={0}
+        maxPolarAngle={Math.PI / 1.75}
+      />
+      {/* <Environment preset="dawn" background={false} /> */}
+    </Canvas>
+  );
+};
+
+export default Home;
+
+{
+  /* <PresentationControls
           global={false} // Spin globally or by dragging the model
           cursor={true} // Whether to toggle cursor style on drag
           snap={false} // Snap-back to center (can also be a spring config)
@@ -72,11 +93,5 @@ const Home: NextPage = () => {
           config={{ mass: 1, tension: 170, friction: 26 }} // Spring config
         >
           <Model />
-        </PresentationControls>
-      </Suspense>
-      {/* <Environment preset="sunset" background /> */}
-    </Canvas>
-  );
-};
-
-export default Home;
+        </PresentationControls> */
+}
