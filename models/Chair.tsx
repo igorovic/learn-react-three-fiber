@@ -12,14 +12,17 @@ export default function Model(props: any) {
         receiveShadow
         geometry={nodes.mesh_0.geometry}
         material={nodes.mesh_0.material}
+        visible={false}
       />
+
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.mesh_1.geometry}
         material={nodes.mesh_1.material}
         position={[0, 0, 0.83]}
-        rotation={[-Math.PI / 2, 0, 0]}
+        //rotation={[-Math.PI / 2, 0, 0]}
+        visible={false}
       />
       <mesh
         castShadow
@@ -27,13 +30,15 @@ export default function Model(props: any) {
         geometry={nodes.mesh_5.geometry}
         material={nodes.mesh_5.material}
         position={[0, 0, 0.83]}
-        rotation={[-Math.PI / 2, 0, 0]}
+        //rotation={[-Math.PI / 2, 0, 0]}
+        visible={false}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.mesh_6.geometry}
         material={nodes.mesh_6.material}
+        visible={false}
       />
       <mesh
         castShadow
@@ -41,13 +46,15 @@ export default function Model(props: any) {
         geometry={nodes.mesh_7.geometry}
         material={nodes.mesh_7.material}
         position={[0, 0, 0.83]}
-        rotation={[-Math.PI / 2, 0, 0]}
+        //rotation={[-Math.PI / 2, 0, 0]}
+        visible={false}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.mesh_8.geometry}
         material={nodes.mesh_8.material}
+        visible={false}
       />
       <mesh
         castShadow
@@ -55,13 +62,15 @@ export default function Model(props: any) {
         geometry={nodes.mesh_9.geometry}
         material={nodes.mesh_9.material}
         position={[0, 0, 0.83]}
-        rotation={[-Math.PI / 2, 0, 0]}
+        //rotation={[-Math.PI / 2, 0, 0]}
+        visible={false}
       />
       <mesh
         castShadow
         receiveShadow
         geometry={nodes.mesh_10.geometry}
         material={nodes.mesh_10.material}
+        visible={false}
       />
       <mesh
         castShadow
@@ -69,7 +78,8 @@ export default function Model(props: any) {
         geometry={nodes.mesh_11.geometry}
         material={nodes.mesh_11.material}
         position={[0, 0, 0.83]}
-        rotation={[-Math.PI / 2, 0, 0]}
+        //rotation={[-Math.PI / 2, 0, 0]}
+        visible={false}
       />
       <mesh
         castShadow
