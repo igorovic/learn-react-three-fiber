@@ -78,6 +78,7 @@ const Home: NextPage<any> = () => {
         <p>Select mesh</p>
         {parts.map((p) => (
           <Checkbox
+            key={p}
             label={p}
             defaultChecked
             value={p}
